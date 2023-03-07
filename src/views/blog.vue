@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import AppSidebar from '../components/sidebar'
-import BlogPost from '../components/blog-post'
-import AppFooter from '../components/footer'
+import AppSidebar from '../components/organisms/sidebar'
+import BlogPost from '../components/organisms/blog-post'
+import AppFooter from '../components/organisms/footer'
 
 export default {
   name: 'Blog',
