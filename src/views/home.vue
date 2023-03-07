@@ -19,11 +19,15 @@
           rootClassName="rootClassName1"
         ></app-about>
       </div>
-      <div id="skills" class="home-my-skills">
-        <h1 class="home-text05">
-          <span>My Skills</span>
-          <br />
-        </h1>
+      <div id="skills" class="container">
+        <h1 class="home-text05">My Skills</h1>
+        <div class="bar front advanced" data-skill="Python"></div>
+        <div class="bar front advanced" data-skill="JavaScript"></div>
+        <div class="bar front advanced" data-skill="CSS3"></div>
+        <div class="bar back intermediate" data-skill="Vue.js"></div>
+        <div class="bar back intermediate" data-skill="PHP"></div>
+        <div class="bar back basic" data-skill="Flutter"></div>
+        <div class="bar learning" data-skill="Tensorflow"></div>
       </div>
       <div id="projects" class="home-projects">
         <h1 class="home-text08">
@@ -150,11 +154,11 @@
 </template>
 
 <script>
-import NavBar from '../components/nav-bar'
-import AppSidebar from '../components/sidebar'
-import AppAbout from '../components/about'
-import BlogPost from '../components/blog-post'
-import AppFooter from '../components/footer'
+import NavBar from '../components/organisms/nav-bar'
+import AppSidebar from '../components/organisms/sidebar'
+import AppAbout from '../components/organisms/about'
+import BlogPost from '../components/organisms/blog-post'
+import AppFooter from '../components/organisms/footer'
 
 export default {
   name: 'Home',
@@ -178,6 +182,80 @@ export default {
 </script>
 
 <style scoped>
+
+body{
+  font-family: Helvetica, Arial, sans-serif;
+}
+.container{
+  width: 50%;
+  margin: 0 auto;
+}
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-webkit-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-moz-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-o-keyframes load{
+  from {
+    width: 0%
+  }
+}
+
+.bar{
+  background-color: var(--dl-color-gray-white);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--dl-color-gray-white);
+  font-weight: bold;
+}
+.bar::before{
+  content:  attr(data-skill);
+  background-color: #dd6e42;
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  border-radius: inherit;
+  animation: load 2s 0s;
+  -webkit-animation: load 2s 0s;
+  -moz-animation: load 2s 0s;
+  -o-animation: load 2s 0s;
+}
+
+.bar.front::before{
+  background-color: #3a506b;
+}
+.bar.back::before{
+  background-color: #9bc1bc;
+}
+
+.bar.learning::before{
+  width: calc(20% - 10px);
+}
+.bar.basic::before{
+  width: calc(40% - 10px);
+}
+.bar.intermediate::before{
+  width: calc(60% - 10px);
+}
+.bar.advanced::before{
+  width: calc(80% - 10px);
+}
+.bar.expert::before{
+  width: calc(100% - 10px);
+}
+
+
 .typewrite1 {
   color: var(--dl-color-gray-white);
   align-self: center;
@@ -284,7 +362,7 @@ export default {
   color: var(--dl-color-gray-white);
   font-style: normal;
   font-family: IBM Plex Sans Condensed;
-  font-weight: 400;
+  font-weight: 500;
 }
 .home-projects {
   flex: 0 0 auto;
