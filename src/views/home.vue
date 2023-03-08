@@ -17,7 +17,7 @@
               heading="About me"
               name="Rebecca Borski"
               quote="lorem ipsum "
-              profile_src="/assets/profile-bw.png"
+              profile_src="/assets/profile-300h.png"
               rootClassName="rootClassName1"
           ></app-about>
         </div>

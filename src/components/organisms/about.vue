@@ -4,7 +4,7 @@
       <h1 class="about-heading">{{ heading }}</h1>
       <img
           alt="image"
-          src="/assets/profile-bw.png"
+          src="/assets/bw-face.png"
           class="about-image"
       />
       <span class="about-text">
@@ -67,7 +67,6 @@ export default {
   color: var(--dl-color-gray-white);
   width: 500px;
   font-size: 1.15rem;
-  max-width: auto;
   align-self: center;
   margin-top: var(--dl-space-space-twounits);
   text-align: center;
@@ -83,7 +82,7 @@ export default {
     flex-wrap: wrap;
   }
   .about-image {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   .about-text {
     margin-top: var(--dl-space-space-threeunits);

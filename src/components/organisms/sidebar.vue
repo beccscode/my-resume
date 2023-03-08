@@ -4,9 +4,9 @@
       <nav class="sidebar-nav">
         <a href="#home" ><img :alt="image_alt" :src="image_src" class="sidebar-image" /></a>
         <a href="#about" class="sidebar-link">{{ text }}</a>
-        <a href="#skills" class="sidebar-link1">{{ text1 }}</a>
-        <a href="#projects" class="sidebar-link2">{{ text2 }}</a>
-        <a href="#experience" class="sidebar-link3">{{ text3 }}</a>
+        <a href="#skills" class="sidebar-link">{{ text1 }}</a>
+        <a href="#projects" class="sidebar-link">{{ text2 }}</a>
+        <a href="#experience" class="sidebar-link">{{ text3 }}</a>
         <router-link to="/blog" class="sidebar-navlink">{{ text4 }}</router-link>
       </nav>
     </div>
@@ -51,11 +51,13 @@ export default {
 </script>
 
 <style scoped>
+
 .sidebar-container {
   top: 0;
+  left: 0;
   width: auto;
   height: 100%;
-  display: flex;
+  z-index: 4;
   position: fixed;
   align-items: flex-start;
   flex-direction: column;
@@ -84,28 +86,12 @@ export default {
 }
 .sidebar-link {
   color: var(--dl-color-gray-white);
-  font-family: IBM Plex Sans;
+  font-family: Computer;
+  font-size: 2rem;
   margin-bottom: var(--dl-space-space-threeunits);
   text-decoration: none;
 }
-.sidebar-link1 {
-  color: var(--dl-color-gray-white);
-  font-family: IBM Plex Sans;
-  margin-bottom: var(--dl-space-space-threeunits);
-  text-decoration: none;
-}
-.sidebar-link2 {
-  color: var(--dl-color-gray-white);
-  display: none;
-  margin-bottom: var(--dl-space-space-threeunits);
-  text-decoration: none;
-}
-.sidebar-link3 {
-  color: var(--dl-color-gray-white);
-  font-family: IBM Plex Sans;
-  margin-bottom: var(--dl-space-space-threeunits);
-  text-decoration: none;
-}
+
 .sidebar-navlink {
   color: var(--dl-color-gray-white);
   display: none;
