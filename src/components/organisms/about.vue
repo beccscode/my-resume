@@ -1,23 +1,21 @@
 <template>
   <div class="about-testimonial-card" v-bind:class="rootClassName">
     <div class="about-about">
-      <span class="about-text">About me</span>
+      <h1 class="about-heading">{{ heading }}</h1>
       <img
-        alt="image"
-        src="/assets/profile-300h.jpg"
-        class="about-image"
+          alt="image"
+          src="/assets/profile-bw.png"
+          class="about-image"
       />
-      <div class="about-description">
-        <span class="about-text1">
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem
-            lorem, malesuada in metus vitae, scelerisque accumsan ipsum. Nam
-            pellentesque nulla leo, sagittis vehicula sem commodo nec.
-          </span>
-          <br />
-          <span></span>
+      <span class="about-text">
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lorem lorem,
+          malesuada in metus vitae, scelerisque accumsan ipsum. Nam pellentesque
+          nulla leo, sagittis vehicula sem commodo nec.
         </span>
-      </div>
+        <br />
+        <span></span>
+      </span>
     </div>
   </div>
 </template>
@@ -26,6 +24,10 @@
 export default {
   name: 'About',
   props: {
+    heading: {
+      type: String,
+      default: 'Heading',
+    },
     rootClassName: String,
   },
 }
@@ -33,68 +35,64 @@ export default {
 
 <style scoped>
 .about-testimonial-card {
-  width: 100%;
+  width: 1182px;
   display: flex;
-  padding: var(--dl-space-space-threeunits);
-  max-width: var(--dl-size-size-maxwidth);
   align-items: center;
+  padding-left: 3px;
+  margin-bottom: 300px;
   justify-content: center;
   background-color: rgba(217, 217, 217, 0);
 }
 .about-about {
-  width: 100%;
+  width: 50%;
   display: flex;
-  padding: var(--dl-space-space-threeunits);
   max-width: var(--dl-size-size-maxwidth);
   align-items: center;
-  padding-top: 48px;
   flex-direction: column;
   justify-content: center;
 }
-.about-text {
+.about-heading {
   color: var(--dl-color-gray-white);
-  font-size: 3rem;
-  max-width: 600px;
   align-self: center;
-  text-align: center;
+  text-align: left;
   font-family: IBM Plex Sans Condensed;
-  font-weight: 600;
-  margin-bottom: var(--dl-space-space-threeunits);
+  margin-bottom: var(--dl-space-space-twounits);
 }
 .about-image {
-  width: var(--dl-size-size-xxlarge);
-  height: var(--dl-size-size-xxlarge);
+  width: auto;
+  height: 500px;
   object-fit: cover;
-  border-radius: var(--dl-radius-radius-round);
 }
-.about-description {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.about-text1 {
+.about-text {
   color: var(--dl-color-gray-white);
+  width: 500px;
   font-size: 1.15rem;
-  max-width: 600px;
-  margin-top: var(--dl-space-space-threeunits);
+  max-width: auto;
+  align-self: center;
+  margin-top: var(--dl-space-space-twounits);
   text-align: center;
   font-family: IBM Plex Sans;
-  padding-left: var(--dl-space-space-twounits);
-  margin-bottom: var(--dl-space-space-threeunits);
-  padding-right: var(--dl-space-space-twounits);
+  margin-bottom: var(--dl-space-space-twounits);
 }
 .about-root-class-name1 {
   align-self: flex-start;
   background-color: transparent;
 }
 @media(max-width: 991px) {
-  .about-image {
-    margin-bottom: 0;
+  .about-about {
+    flex-wrap: wrap;
   }
-  .about-text1 {
+  .about-image {
+    margin-bottom: 0px;
+  }
+  .about-text {
     margin-top: var(--dl-space-space-threeunits);
     margin-bottom: var(--dl-space-space-threeunits);
+  }
+}
+@media(max-width: 890px) {
+  .about-about {
+    flex-wrap: wrap;
   }
 }
 @media(max-width: 767px) {
@@ -109,8 +107,17 @@ export default {
 }
 @media(max-width: 650px) {
   .about-about {
-    padding-left: 0;
-    padding-right: 0;
+    width: 516px;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .about-heading {
+    align-self: center;
+    text-align: left;
+  }
+  .about-text {
+    text-align: center;
   }
 }
 @media(max-width: 479px) {
@@ -124,7 +131,7 @@ export default {
   .about-image {
     width: 200px;
   }
-  .about-text1 {
+  .about-text {
     width: auto;
   }
 }
