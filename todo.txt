@@ -1,0 +1,4 @@
+- create overlay layer with screen and fix image to size of window
+    - remove overlay when screen is too small
+    - add background that is just the screen and fix it so it doesn't scroll
+- create different layout for mobile with nicer background but still computer in main
