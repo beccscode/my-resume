@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-.about-testimonial-card {
+.about-card {
   width: 1182px;
   display: flex;
   align-items: center;
@@ -51,32 +51,13 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.about-heading {
-  color: var(--dl-color-gray-white);
-  align-self: center;
-  text-align: left;
-  font-family: IBM Plex Sans Condensed;
-  margin-bottom: var(--dl-space-space-twounits);
-}
+
 .about-image {
   width: auto;
   height: 500px;
   object-fit: cover;
 }
-.about-text {
-  color: var(--dl-color-gray-white);
-  width: 500px;
-  font-size: 1.15rem;
-  align-self: center;
-  margin-top: var(--dl-space-space-twounits);
-  text-align: center;
-  font-family: IBM Plex Sans;
-  margin-bottom: var(--dl-space-space-twounits);
-}
-.about-root-class-name1 {
-  align-self: flex-start;
-  background-color: transparent;
-}
+
 @media(max-width: 991px) {
   .about-about {
     flex-wrap: wrap;
@@ -95,7 +76,7 @@ export default {
   }
 }
 @media(max-width: 767px) {
-  .about-testimonial-card {
+  .about-card {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
@@ -111,27 +92,15 @@ export default {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .about-heading {
-    align-self: center;
-    text-align: left;
-  }
-  .about-text {
-    text-align: center;
-  }
+
 }
 @media(max-width: 479px) {
-  .about-testimonial-card {
+  .about-card {
     flex-direction: column;
     padding: var(--dl-space-space-twounits) var(--dl-space-space-unit);
   }
   .about-about {
     padding: var(--dl-space-space-twounits) var(--dl-space-space-unit);
-  }
-  .about-image {
-    width: 200px;
-  }
-  .about-text {
-    width: auto;
   }
 }
 </style>
