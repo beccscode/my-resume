@@ -11,13 +11,16 @@
         <br />
         <div class="typewrite2">I'm Rebecca.</div>
       </div>
-      <div id="about" class="home-about">
-        <app-about
-          name="Rebecca Borski"
-          quote="lorem ipsum "
-          profile_src="/assets/profile-300h.jpg"
-          rootClassName="rootClassName1"
-        ></app-about>
+      <div class="container">
+        <div id="about" class="home-about">
+          <app-about
+              heading="About me"
+              name="Rebecca Borski"
+              quote="lorem ipsum "
+              profile_src="/assets/profile-bw.png"
+              rootClassName="rootClassName1"
+          ></app-about>
+        </div>
       </div>
       <div id="skills" class="container">
         <h1 class="home-text05">My Skills</h1>
@@ -25,6 +28,7 @@
         <div class="bar front advanced" data-skill="JavaScript"></div>
         <div class="bar front advanced" data-skill="CSS3"></div>
         <div class="bar back intermediate" data-skill="Vue.js"></div>
+        <div class="bar back intermediate" data-skill="React"></div>
         <div class="bar back intermediate" data-skill="PHP"></div>
         <div class="bar back basic" data-skill="Flutter"></div>
         <div class="bar learning" data-skill="Tensorflow"></div>
