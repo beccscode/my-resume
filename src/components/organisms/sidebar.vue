@@ -3,11 +3,11 @@
     <div class="sidebar-sidebar">
       <nav class="sidebar-nav">
         <a href="#home" ><img :alt="image_alt" :src="image_src" class="sidebar-image" /></a>
-        <a href="#about" class="sidebar-link">{{ text }}</a>
-        <a href="#skills" class="sidebar-link">{{ text1 }}</a>
-        <a href="#projects" class="sidebar-link">{{ text2 }}</a>
-        <a href="#experience" class="sidebar-link">{{ text3 }}</a>
-        <router-link to="/blog" class="sidebar-navlink">{{ text4 }}</router-link>
+        <a href="#about" class="navbar-link">{{ text }}</a>
+        <a href="#skills" class="navbar-link">{{ text1 }}</a>
+        <a href="#projects" class="navbar-link">{{ text2 }}</a>
+        <a href="#experience" class="navbar-link">{{ text3 }}</a>
+        <router-link to="/blog" class="navbar-link">{{ text4 }}</router-link>
       </nav>
     </div>
   </div>
@@ -84,20 +84,7 @@ export default {
   height: 106px;
   margin-bottom: var(--dl-space-space-threeunits);
 }
-.sidebar-link {
-  color: var(--dl-color-gray-white);
-  font-family: Computer;
-  font-size: 2rem;
-  margin-bottom: var(--dl-space-space-threeunits);
-  text-decoration: none;
-}
 
-.sidebar-navlink {
-  color: var(--dl-color-gray-white);
-  display: none;
-  font-family: IBM Plex Sans;
-  text-decoration: none;
-}
 
 @media(max-width: 1600px) {
 }

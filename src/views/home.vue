@@ -158,20 +158,11 @@
 </template>
 
 <script>
-import NavBar from '../components/organisms/nav-bar'
-import AppSidebar from '../components/organisms/sidebar'
-import AppAbout from '../components/organisms/about'
-import BlogPost from '../components/organisms/blog-post'
-import AppFooter from '../components/organisms/footer'
 
 export default {
   name: 'Home',
   components: {
-    NavBar,
-    AppSidebar,
-    AppAbout,
-    BlogPost,
-    AppFooter,
+
   },
   metaInfo: {
     title: 'Resume',
