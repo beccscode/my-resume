@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <img :src="source" class="img-size">
-    <div class="Content center" >{{title}}</div>
-  </div>
+    <div class="grid-container">
+      <img :src="source" class="img-size">
+      <div class="Content center" >{{title}}</div>
+    </div>
 </template>
 
 <script>
@@ -20,6 +20,12 @@ export default {
 </script>
 
 <style scoped>
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
 
 .img-size {
   width: 50px;
